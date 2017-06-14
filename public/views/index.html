@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTTP-Angular</title>
+        <script src="vendors/angular.min.js" charset="utf-8"></script>
+        <script src="scritps/client.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body ng-app='myApp'>
+
+        <div class="container" ng-controller='defaultController as dc'>
+            <h1>HTTP-Giphy</h1>
+            <input type="text" placeholder='Search Giphy' ng-model='dc.searchInput' class='header' >
+            <button type="button" ng-model='dc.searchButton' ng-click='dc.giphySearch()' class='header'>Search</button>
+            <div class="images" ng-repeat='results in dc.results'>
+                <a href="{{results.images.downsized.url}}"></a><img ng-src="{{results.images.downsized.url}}" alt="">
+            </div>
+        </div>
+
+    </body>
+</html>

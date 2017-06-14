@@ -1,0 +1,23 @@
+img {
+    width:20em;
+    height: 20em;
+    margin:0
+    padding:0
+}
+
+.images {
+    width: 23em;
+    margin:0;;
+    padding: 0;
+    display: inline-block;
+
+}
+
+.header {
+    display: block
+}
+
+button {
+    margin-top:2em;
+    margin-bottom: 2em;
+}
